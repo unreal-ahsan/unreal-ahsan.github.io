@@ -5,11 +5,6 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
-permissions:
-  contents: write
-  pages: write
-  id-token: write
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -20,7 +15,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 16
       
       - name: Install dependencies
         run: npm install --legacy-peer-deps
@@ -28,28 +23,10 @@ jobs:
       - name: Build
         run: npm run build
       
-      - name: Copy files to root
-        run: |
-          # Save .git directory
-          cp -r .git /tmp/.git
-          
-          # Clean repository but keep necessary files
-          find . -mindepth 1 -not -path "./out*" -not -path "./.git*" -delete
-          
-          # Copy built files to root
-          cp -r out/* .
-          
-          # Restore .git directory
-          cp -r /tmp/.git .
-          
-          # Create .nojekyll file
-          touch .nojekyll
-      
-      - name: Commit and push changes
-        run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
-          git add .
-          git commit -m "Deploy to GitHub Pages"
-          git push origin main --force
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
+          publish_branch: gh-pages
 

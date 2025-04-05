@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  distDir: './', // Output directly to root
   images: {
     unoptimized: true,
   },
+  // Don't use distDir: './' as it causes issues
   trailingSlash: true,
 };
 
