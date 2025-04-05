@@ -23,8 +23,8 @@ jobs:
           node-version: 18
       
       - name: Install dependencies
-        # Using npm install instead of npm ci since we don't have a lock file
-        run: npm install
+        # Using --legacy-peer-deps to bypass peer dependency conflicts
+        run: npm install --legacy-peer-deps
       
       - name: Build
         run: npm run build

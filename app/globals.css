@@ -13,18 +13,6 @@ body {
   background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
-@layer utilities {
-  .transition-transform {
-    transition-property: transform;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 150ms;
-  }
-
-  .hover\:scale-105:hover {
-    transform: scale(1.05);
-  }
-}
-
 html {
   scroll-behavior: smooth;
 }
