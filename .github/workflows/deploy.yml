@@ -23,15 +23,33 @@ jobs:
           node-version: 18
       
       - name: Install dependencies
-        # Using --legacy-peer-deps to bypass peer dependency conflicts
         run: npm install --legacy-peer-deps
       
       - name: Build
         run: npm run build
       
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: out
-          branch: gh-pages
+      - name: Copy files to root
+        run: |
+          # Save .git directory
+          cp -r .git /tmp/.git
+          
+          # Clean repository but keep necessary files
+          find . -mindepth 1 -not -path "./out*" -not -path "./.git*" -delete
+          
+          # Copy built files to root
+          cp -r out/* .
+          
+          # Restore .git directory
+          cp -r /tmp/.git .
+          
+          # Create .nojekyll file
+          touch .nojekyll
+      
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add .
+          git commit -m "Deploy to GitHub Pages"
+          git push origin main --force
 
