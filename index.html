@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AHabib - Senior Unreal Engine Developer</title>
+  <title>MD Ahsan Habib - Technical Lead, Unreal Engine Developer</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
   <style>
     /* Base styles */
@@ -206,6 +206,21 @@
       background-color: var(--color-red-700);
     }
     
+    .linkedin-button {
+      display: inline-block;
+      background-color: #0077b5;
+      color: white;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+      margin-bottom: 1rem;
+      transition: background-color 0.2s;
+    }
+    
+    .linkedin-button:hover {
+      background-color: #005fa3;
+    }
+    
     .tags {
       display: flex;
       flex-wrap: wrap;
@@ -219,6 +234,22 @@
       font-weight: 600;
       padding: 0.25rem 0.5rem;
       border-radius: 0.25rem;
+    }
+    
+    /* Category headings */
+    .category-heading {
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-align: center;
+      color: var(--color-primary);
+      margin: 2rem 0;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--color-primary);
+      display: block;
+      width: 80%;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
     }
     
     /* Experience section */
@@ -248,60 +279,32 @@
     
     .experience-description {
       color: #d1d5db;
+      margin-bottom: 0.75rem;
     }
     
-    /* YouTube section */
-    .videos-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-bottom: 2rem;
+    .experience-location {
+      display: flex;
+      align-items: center;
+      color: #9ca3af;
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
     }
     
-    .video-card {
-      background-color: var(--color-gray-700);
-      border-radius: 0.5rem;
-      overflow: hidden;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    .experience-location span {
+      margin-right: 1rem;
     }
     
-    .video-thumbnail {
-      width: 100%;
-      height: auto;
-    }
-    
-    .video-content {
-      padding: 1rem;
-    }
-    
-    .video-title {
-      font-size: 1.125rem;
-      font-weight: 600;
+    .experience-bullet {
       margin-bottom: 0.5rem;
+      position: relative;
+      padding-left: 1.5rem;
     }
     
-    .video-link {
+    .experience-bullet:before {
+      content: "•";
+      position: absolute;
+      left: 0.5rem;
       color: var(--color-primary);
-    }
-    
-    .video-link:hover {
-      text-decoration: underline;
-    }
-    
-    .subscribe-button {
-      display: block;
-      background-color: var(--color-red-600);
-      color: white;
-      font-weight: bold;
-      padding: 0.5rem 1rem;
-      border-radius: 0.25rem;
-      margin: 0 auto;
-      width: fit-content;
-      transition: background-color 0.2s;
-    }
-    
-    .subscribe-button:hover {
-      background-color: var(--color-red-700);
     }
     
     /* Contact section */
@@ -310,65 +313,47 @@
       margin: 0 auto;
     }
     
-    .contact-form {
+    .contact-info {
+      background-color: var(--color-gray-800);
+      border-radius: 0.5rem;
+      padding: 2rem;
       margin-bottom: 2rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
     
-    .form-group {
-      margin-bottom: 1rem;
+    .contact-intro {
+      margin-bottom: 2rem;
+      text-align: center;
     }
     
-    label {
-      display: block;
-      margin-bottom: 0.5rem;
-    }
-    
-    input,
-    textarea {
-      width: 100%;
-      padding: 0.5rem;
-      background-color: var(--color-gray-700);
-      border: none;
-      border-radius: 0.25rem;
-      color: var(--color-foreground);
-    }
-    
-    input:focus,
-    textarea:focus {
-      outline: 2px solid var(--color-primary);
-    }
-    
-    textarea {
-      resize: vertical;
-      min-height: 8rem;
-    }
-    
-    .submit-button {
-      background-color: var(--color-primary);
-      color: white;
-      font-weight: bold;
-      padding: 0.5rem 1rem;
-      border: none;
-      border-radius: 0.25rem;
-      cursor: pointer;
-      transition: background-color 0.2s;
-    }
-    
-    .submit-button:hover {
-      background-color: var(--color-primary-hover);
-    }
-    
-    .social-links {
-      display: flex;
-      justify-content: center;
+    .contact-details {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 1rem;
     }
     
-    .social-link {
-      color: var(--color-primary);
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
     }
     
-    .social-link:hover {
+    .contact-item-icon {
+      margin-right: 0.75rem;
+      color: var(--color-primary);
+      font-size: 1.25rem;
+    }
+    
+    .contact-item-text {
+      font-size: 0.95rem;
+    }
+    
+    .contact-item-text a {
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+    
+    .contact-item-text a:hover {
       text-decoration: underline;
     }
     
@@ -406,6 +391,14 @@
     .copyright {
       font-size: 0.875rem;
       color: #9ca3af;
+    }
+    
+    /* Company logo */
+    .company-logo {
+      display: block;
+      max-width: 100px;
+      max-height: 40px;
+      margin: 0.5rem 0;
     }
     
     /* Responsive styles */
@@ -448,6 +441,10 @@
       .videos-grid {
         grid-template-columns: 1fr;
       }
+      
+      .contact-details {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -463,7 +460,6 @@
           <li><a href="#about">About Me</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#experience">Experience</a></li>
-          <li><a href="#youtube">YouTube</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -473,8 +469,8 @@
   <!-- Hero Section -->
   <section id="home" class="hero">
     <div class="container">
-      <h1>Hi, I'm AHabib</h1>
-      <h2>Senior Technical Lead and Unreal Engine Developer</h2>
+      <h1>Hi, I'm MD Ahsan Habib</h1>
+      <h2>Technical Lead, Unreal Engine Developer</h2>
       <p>Specializing in creating industrial simulations and delivering unforgettable player experiences.</p>
       <a href="#projects" class="button">View My Work</a>
     </div>
@@ -502,45 +498,202 @@
   <section id="projects">
     <div class="container">
       <h2 class="section-title">Projects</h2>
+      
+      <!-- Featured Projects -->
+      <h2 class="category-heading">Featured Projects</h2>
       <div class="projects-grid">
-        <!-- Project 1 -->
+        <!-- Project 1 - Project Z -->
         <div class="project-card">
           <div class="project-content">
-            <h3 class="project-title">Industrial Simulation Project</h3>
-            <p class="project-description">A high-fidelity industrial simulation created with Unreal Engine, showcasing complex machinery and realistic physics.</p>
-            <a href="https://www.youtube.com/watch?v=example1" class="youtube-button" target="_blank" rel="noopener noreferrer">View on YouTube</a>
-            <div class="tags">
-              <span class="tag">Unreal Engine</span>
-              <span class="tag">Simulation</span>
-              <span class="tag">Physics</span>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Project 2 -->
-        <div class="project-card">
-          <div class="project-content">
-            <h3 class="project-title">Interactive VR Experience</h3>
-            <p class="project-description">An immersive VR experience developed in Unreal Engine, pushing the boundaries of virtual reality interaction.</p>
-            <a href="https://www.youtube.com/watch?v=example2" class="youtube-button" target="_blank" rel="noopener noreferrer">View on YouTube</a>
-            <div class="tags">
-              <span class="tag">Unreal Engine</span>
-              <span class="tag">VR</span>
-              <span class="tag">Interaction Design</span>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Project 3 -->
-        <div class="project-card">
-          <div class="project-content">
-            <h3 class="project-title">Advanced Game Mechanics Demo</h3>
+            <h3 class="project-title">Project - Z The Beginning</h3>
             <p class="project-description">A demonstration of cutting-edge game mechanics implemented in Unreal Engine, showcasing innovative gameplay features.</p>
-            <a href="https://www.youtube.com/watch?v=example3" class="youtube-button" target="_blank" rel="noopener noreferrer">View on YouTube</a>
+            <a href="https://youtu.be/psG9_HkvsLU?si=qu1IHhkHgSRY-yhG" class="youtube-button" target="_blank" rel="noopener noreferrer">View on YouTube</a>
             <div class="tags">
               <span class="tag">Unreal Engine</span>
               <span class="tag">Game Mechanics</span>
               <span class="tag">Innovation</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 2 - Large Crowd Simulation -->
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="project-title">Large Crowd Simulation</h3>
+            <p class="project-description">Simulating 800 NPCs with no CPU load using advanced optimization techniques and custom AI systems in Unreal Engine.</p>
+            <a href="https://www.linkedin.com/posts/ahsan-soft_trying-to-create-my-own-crowd-ai-system-activity-7319968336535044098-me4o?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAABvlXbUB8BYEVloQ3SG9s5XHRvZP2MvPp5E" class="linkedin-button" target="_blank" rel="noopener noreferrer">View on LinkedIn</a>
+            <div class="tags">
+              <span class="tag">Unreal Engine</span>
+              <span class="tag">AI Systems</span>
+              <span class="tag">Optimization</span>
+              <span class="tag">Crowd Simulation</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 3 - Game Dev Reel -->
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="project-title">Game Dev Reel</h3>
+            <p class="project-description">A showcase of my game development work and technical achievements in Unreal Engine, highlighting various projects and techniques.</p>
+            <a href="https://youtu.be/HoyIqeVjocA?si=EymlofrcZSmfGJo7" class="youtube-button" target="_blank" rel="noopener noreferrer">View on YouTube</a>
+            <div class="tags">
+              <span class="tag">Unreal Engine</span>
+              <span class="tag">Portfolio</span>
+              <span class="tag">Game Development</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 4 - Precision Unleashed -->
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="project-title">Precision Unleashed</h3>
+            <p class="project-description">Mastering the Shooting Game Mechanism with advanced targeting, recoil systems, and responsive controls in Unreal Engine.</p>
+            <a href="https://youtu.be/suefCcWc_CY?si=0jXtB7dglyod9FDm" class="youtube-button" target="_blank" rel="noopener noreferrer">View on YouTube</a>
+            <div class="tags">
+              <span class="tag">Unreal Engine</span>
+              <span class="tag">FPS Mechanics</span>
+              <span class="tag">Game Systems</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 5 - Project Z Trailer -->
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="project-title">Project Z - The Beginning Trailer</h3>
+            <p class="project-description">Official trailer for Project Z, showcasing the game's atmosphere, mechanics, and visual style created in Unreal Engine.</p>
+            <a href="https://youtu.be/36sjxAkKHHM?si=z0Bf16qosU442RWe" class="youtube-button" target="_blank" rel="noopener noreferrer">View on YouTube</a>
+            <div class="tags">
+              <span class="tag">Unreal Engine</span>
+              <span class="tag">Game Trailer</span>
+              <span class="tag">Cinematic</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 6 - Inventory System -->
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="project-title">Inventory System</h3>
+            <p class="project-description">A comprehensive inventory management system built in Unreal Engine, featuring drag-and-drop functionality, item stacking, and category filtering.</p>
+            <a href="https://youtu.be/yg8R__XA9js?si=8KkhbWex7qeVg1QH" class="youtube-button" target="_blank" rel="noopener noreferrer">View on YouTube</a>
+            <div class="tags">
+              <span class="tag">Unreal Engine</span>
+              <span class="tag">UI/UX</span>
+              <span class="tag">Game Systems</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Confidential Projects Section -->
+      <h2 class="category-heading">Confidential AR/VR Projects</h2>
+      <div class="projects-grid">
+        <!-- Confidential Project 1 - Samsung Biologics -->
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="project-title">Samsung Biologics</h3>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/2560px-Samsung_Logo.svg.png" alt="Samsung Logo" class="company-logo">
+            <p class="project-description">A confidential AR/VR project developed for Samsung Biologics, focusing on advanced visualization and training solutions.</p>
+            <div class="tags">
+              <span class="tag">AR/VR</span>
+              <span class="tag">Enterprise</span>
+              <span class="tag">Training</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Confidential Project 2 - Hyundai Mobis -->
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="project-title">Hyundai Mobis</h3>
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/Hyundai_Mobis_logo.svg/250px-Hyundai_Mobis_logo.svg.png" alt="Hyundai Mobis Logo" class="company-logo">
+            <p class="project-description">A confidential AR/VR project for Hyundai Mobis, providing immersive automotive component visualization and assembly training.</p>
+            <div class="tags">
+              <span class="tag">AR/VR</span>
+              <span class="tag">Automotive</span>
+              <span class="tag">Training</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Confidential Project 3 - NK -->
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="project-title">NK - How Things Are in North Korea</h3>
+            <p class="project-description">A confidential VR documentary experience providing insights into daily life and conditions in North Korea through immersive storytelling.</p>
+            <div class="tags">
+              <span class="tag">VR</span>
+              <span class="tag">Documentary</span>
+              <span class="tag">Interactive</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Confidential Project 4 - DigitalTwin -->
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="project-title">DigitalTwin - Ingot</h3>
+            <p class="project-description">A digital twin factory simulation focused on ingot production processes, providing real-time monitoring and optimization capabilities.</p>
+            <div class="tags">
+              <span class="tag">Digital Twin</span>
+              <span class="tag">Factory Simulation</span>
+              <span class="tag">Industrial</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Confidential Project 5 - PSK2025 -->
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="project-title">PSK2025</h3>
+            <img src="https://www.pskinc.com/img/psk_logo.png" alt="PSK Inc Logo" class="company-logo">
+            <p class="project-description">A comprehensive factory simulation project providing detailed visualization and process optimization for manufacturing facilities.</p>
+            <div class="tags">
+              <span class="tag">Factory Simulation</span>
+              <span class="tag">Industrial</span>
+              <span class="tag">Optimization</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Confidential Project 6 - Enterprise AR Training -->
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="project-title">Enterprise AR Training Solution</h3>
+            <p class="project-description">A custom augmented reality training platform developed for a Fortune 500 company to streamline employee onboarding and technical training.</p>
+            <div class="tags">
+              <span class="tag">AR</span>
+              <span class="tag">Enterprise</span>
+              <span class="tag">Training</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Confidential Project 7 - Medical VR -->
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="project-title">Medical VR Simulation</h3>
+            <p class="project-description">A virtual reality medical simulation for healthcare professionals to practice complex procedures in a risk-free environment with realistic haptic feedback.</p>
+            <div class="tags">
+              <span class="tag">VR</span>
+              <span class="tag">Medical</span>
+              <span class="tag">Simulation</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Confidential Project 8 - Military Training -->
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="project-title">Military Training Application</h3>
+            <p class="project-description">A mixed reality training application for military personnel featuring advanced scenario generation and real-time performance analytics.</p>
+            <div class="tags">
+              <span class="tag">Mixed Reality</span>
+              <span class="tag">Defense</span>
+              <span class="tag">Training</span>
             </div>
           </div>
         </div>
@@ -551,92 +704,68 @@
   <!-- Experience Section -->
   <section id="experience">
     <div class="container">
-      <h2 class="section-title">Experience</h2>
+      <h2 class="section-title">💼 Work Experience</h2>
       <div class="experience-container">
         <!-- Experience 1 -->
         <div class="experience-item">
-          <h3 class="experience-title">Senior Technical Lead</h3>
-          <p class="experience-company">Vinacts Co., LTD | 2018 - Present</p>
-          <p class="experience-description">Lead a team of developers in creating cutting-edge industrial simulations and game projects using Unreal Engine. Oversee technical aspects of multiple projects and mentor junior developers.</p>
+          <h3 class="experience-title">Technical Lead</h3>
+          <p class="experience-company">Bakoony LTD</p>
+          <div class="experience-location">
+            <span>📍 Dhaka, Bangladesh</span>
+            <span>🗓️ March 2024 – Present</span>
+          </div>
+          <p class="experience-bullet">Leading development of industrial simulation projects using Unreal Engine.</p>
+          <p class="experience-bullet">Managing and mentoring a team of developers to ensure high-quality code and project delivery.</p>
+          <p class="experience-bullet">Architecting gameplay systems and backend infrastructure tailored for simulation use cases.</p>
         </div>
         
         <!-- Experience 2 -->
         <div class="experience-item">
-          <h3 class="experience-title">Unreal Engine Developer</h3>
-          <p class="experience-company">GameStudio Inc. | 2015 - 2018</p>
-          <p class="experience-description">Developed core gameplay systems and optimized performance for multiple AAA game titles. Specialized in creating realistic physics simulations and immersive environments.</p>
-        </div>
-        
-        <!-- Experience 3 -->
-        <div class="experience-item">
-          <h3 class="experience-title">Junior Game Developer</h3>
-          <p class="experience-company">Indie Games Ltd. | 2013 - 2015</p>
-          <p class="experience-description">Assisted in the development of mobile and PC games using Unity and Unreal Engine. Gained extensive experience in game optimization and cross-platform development.</p>
+          <h3 class="experience-title">Senior Unreal Engine Developer</h3>
+          <p class="experience-company">Vinacts Co., LTD</p>
+          <div class="experience-location">
+            <span>📍 Dhaka, Bangladesh</span>
+            <span>🗓️ July 9, 2023 – February 2024</span>
+          </div>
+          <p class="experience-bullet">Developed and optimized real-time interactive 3D applications in Unreal Engine.</p>
+          <p class="experience-bullet">Designed and implemented gameplay systems and simulation mechanics.</p>
+          <p class="experience-bullet">Collaborated across disciplines to achieve high-performance, scalable projects.</p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- YouTube Section -->
-  <section id="youtube">
-    <div class="container">
-      <h2 class="section-title">Latest YouTube Videos</h2>
-      <div class="videos-grid">
-        <!-- Video 1 -->
-        <div class="video-card">
-          <img src="https://via.placeholder.com/320x180.png?text=Video+Thumbnail" alt="Video thumbnail" class="video-thumbnail">
-          <div class="video-content">
-            <h3 class="video-title">Advanced Unreal Engine Techniques</h3>
-            <a href="https://www.youtube.com/watch?v=video1" class="video-link" target="_blank" rel="noopener noreferrer">Watch Video</a>
-          </div>
-        </div>
-        
-        <!-- Video 2 -->
-        <div class="video-card">
-          <img src="https://via.placeholder.com/320x180.png?text=Video+Thumbnail" alt="Video thumbnail" class="video-thumbnail">
-          <div class="video-content">
-            <h3 class="video-title">Creating Realistic Industrial Simulations</h3>
-            <a href="https://www.youtube.com/watch?v=video2" class="video-link" target="_blank" rel="noopener noreferrer">Watch Video</a>
-          </div>
-        </div>
-        
-        <!-- Video 3 -->
-        <div class="video-card">
-          <img src="https://via.placeholder.com/320x180.png?text=Video+Thumbnail" alt="Video thumbnail" class="video-thumbnail">
-          <div class="video-content">
-            <h3 class="video-title">Optimizing Performance in Large-Scale Projects</h3>
-            <a href="https://www.youtube.com/watch?v=video3" class="video-link" target="_blank" rel="noopener noreferrer">Watch Video</a>
-          </div>
-        </div>
-      </div>
-      <a href="https://www.youtube.com/@AHabib1080" class="subscribe-button" target="_blank" rel="noopener noreferrer">Subscribe on YouTube</a>
     </div>
   </section>
 
   <!-- Contact Section -->
   <section id="contact">
     <div class="container">
-      <h2 class="section-title">Contact Me</h2>
+      <h2 class="section-title">📬 Contact Me</h2>
       <div class="contact-container">
-        <form class="contact-form" id="contact-form">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
+        <div class="contact-info">
+          <p class="contact-intro">
+            I'm always open to exciting opportunities, collaborations, or just a friendly chat about game development, Unreal Engine, or anything tech-related!
+          </p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <span class="contact-item-icon">📍</span>
+              <span class="contact-item-text">Location: Dhaka, Bangladesh</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-item-icon">🕹️</span>
+              <span class="contact-item-text">Role: Technical Lead at Bakoony LTD</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-item-icon">🎮</span>
+              <span class="contact-item-text">YouTube: <a href="https://www.youtube.com/@AHabib1080" target="_blank">@AHabib1080</a></span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-item-icon">📧</span>
+              <span class="contact-item-text">Email: <a href="mailto:asrk1080@gmail.com">asrk1080@gmail.com</a></span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-item-icon">🌐</span>
+              <span class="contact-item-text">LinkedIn: <a href="https://linkedin.com/in/ahsan-soft" target="_blank">linkedin.com/in/ahsan-soft</a></span>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
-          </div>
-          <button type="submit" class="submit-button">Send Message</button>
-        </form>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/ahabib" class="social-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://github.com/ahabib" class="social-link" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://www.youtube.com/@AHabib1080" class="social-link" target="_blank" rel="noopener noreferrer">YouTube</a>
         </div>
       </div>
     </div>
@@ -651,7 +780,6 @@
           <li><a href="#about">About Me</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#experience">Experience</a></li>
-          <li><a href="#youtube">YouTube</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -669,23 +797,7 @@
     // Set current year in copyright
     document.getElementById('current-year').textContent = new Date().getFullYear();
     
-    // Form submission
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const message = document.getElementById('message').value;
-      
-      // In a real implementation, you would send this data to a server
-      console.log('Form submitted:', { name, email, message });
-      
-      // Show success message
-      alert('Thank you for your message! I will get back to you soon.');
-      
-      // Reset form
-      this.reset();
-    });
+    // Form submission handling (removed since we no longer have a form)
   </script>
 </body>
 </html>
-
